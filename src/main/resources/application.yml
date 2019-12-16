@@ -1,0 +1,44 @@
+jpush:
+  appKey: b4cfaca36af4be1298f2334e
+  masterSecret: 3d4bcf5c6134f24301b973ea
+  version: v1
+  requestUrl: https://api.im.jpush.cn
+server:
+  session-timeout: 1800
+#    tomcat:
+#        max-threads: 1000
+#        min-spare-threads: 30
+  port: 8080
+#    uri-encoding: utf-8
+#security:
+#  basic:
+#    enabled: false
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  profiles: 
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 30Mb
+      max-request-size: 30Mb
+  devtools:
+    restart:
+      enabled: true
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:config/ehcache.xml
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: mybatis/**/*Mapper.xml
+  typeAliasesPackage: com.ss.domain
+  logging:
+    level:
+       com.ss.*.dao : debug

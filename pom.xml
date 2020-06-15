@@ -350,7 +350,7 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-handler</artifactId>
-            <version>4.1.25.Final</version>
+            <version>4.1.46.Final</version>
         </dependency>
         <!-- 启用Netty https://mvnrepository.com/artifact/org.yeauty/netty-websocket-spring-boot-starter -->
         <dependency>
